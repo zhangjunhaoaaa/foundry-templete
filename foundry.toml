@@ -21,7 +21,7 @@
 
 [etherscan]
   # arbitrum = { key = "${API_KEY_ARBISCAN}" }
-  arbitrum_sepolia = { key = "${API_KEY_ARBISCAN}" }
+  # arbitrum_sepolia = { key = "${API_KEY_ARBISCAN}" }
   # avalanche = { key = "${API_KEY_SNOWTRACE}" }
   # base = { key = "${API_KEY_BASESCAN}" }
   # bnb_smart_chain = { key = "${API_KEY_BSCSCAN}" }
@@ -32,7 +32,9 @@
   # polygon = { key = "${API_KEY_POLYGONSCAN}" }
   # sepolia = { key = "${API_KEY_ETHERSCAN}" }
   # unichain = { key = "${API_KEY_UNICHAIN}" }
+  sepolia = { key = "${API_KEY_ETHERSCAN}" }
 
+  
 [fmt]
   bracket_spacing = true
   int_types = "long"
