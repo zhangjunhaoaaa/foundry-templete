@@ -1,20 +1,19 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
 
-// 导入依赖库
-import "ds-test/test.sol"; // 用于测试的库
-import "@openzeppelin/contracts/token/ERC20/IERC20.sol"; // ERC20接口
-import "@openzeppelin/contracts/token/ERC721/IERC721.sol"; // ERC721接口
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol"; // ERC20实现
-import "@openzeppelin/contracts/token/ERC721/ERC721.sol"; // ERC721实现
-import "@openzeppelin/contracts/access/Ownable.sol"; // 权限控制模块
-import "../src/MyNFT.sol"; // 自定义的NFT合约
-import "../src/NFTMarket.sol"; // 自定义的NFT市场合约
-import "forge-std/Vm.sol"; // Foundry 里的虚拟机接口，用于测试
 
-// ERC20Mock 合约，继承自 ERC20
+import "ds-test/test.sol"; 
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol"; 
+import "@openzeppelin/contracts/token/ERC721/IERC721.sol"; 
+import "@openzeppelin/contracts/token/ERC20/ERC20.sol"; 
+import "@openzeppelin/contracts/token/ERC721/ERC721.sol"; 
+import "@openzeppelin/contracts/access/Ownable.sol"; 
+import "../src/MyNFT.sol"; 
+import "../src/NFTMarket.sol";
+import "forge-std/Vm.sol"; 
+
+
 contract ERC20Mock is ERC20 {
-    // 构造函数，初始化代币并给合约部署者铸造初始代币
     constructor() ERC20("Test Token", "TTK") {
         _mint(msg.sender, 1000000 * 10 ** 18);
     }
